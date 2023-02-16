@@ -1,0 +1,70 @@
+import 'dart:io';
+
+void main()
+{
+  var a=[1,2,3,4,5];
+
+  print("Menu:");
+  print("Press 1 for Insert element:");
+  print("Press 2 for Delete element:");
+  print("Press 3 for Update element:");
+  print("Press 4 for View element:");
+  print("Press 0 for Exit:");
+
+  stdout.write("Enter your Choice:-");
+  var choice=int.parse(stdin.readLineSync()!);
+
+  switch(choice)
+  {
+    case 1:
+      {
+        print(a);
+        print("Enter the element to be inserted:");
+        var element=int.parse(stdin.readLineSync()!);
+        print("Enter the index where the element should be inserted:");
+        var index=int.parse(stdin.readLineSync()!);
+        a.insert(index,element);
+        print(a);
+        break;
+      }
+
+    case 2:
+      {
+        print(a);
+        print("Enter the index of the element to be deleted:");
+        var index=int.parse(stdin.readLineSync()!);
+        a.removeAt(index);
+        print(a);
+        break;
+      }
+
+    case 3:
+      {
+        print(a);
+        print("Enter the index of the element to be updated:");
+        var index=int.parse(stdin.readLineSync()!);
+        print("Enter the new value for the element:");
+        var newvalue=int.parse(stdin.readLineSync()!);
+        a[index]=newvalue;
+        print(a);
+        break;
+      }
+
+    case 4:
+      {
+        print(a);
+        break;
+      }
+
+    case 0:
+      {
+        exit(0);
+        break;
+      }
+
+    default:
+      {
+        print("invalid choice");
+      }
+  }
+}

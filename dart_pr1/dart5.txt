@@ -1,0 +1,108 @@
+import 'dart:io';
+
+void main()
+{
+  List l1=[];
+  num no,sum=0;
+
+  for(int i=0; i<3; i++)
+    {
+      List l1=[];
+      for(int j=0; j<3; j++)
+        {
+          String val;
+          int no;
+          val=stdin.readLineSync()!;
+          no=int.parse(val);
+          l1.add(l1);
+        }
+    }
+
+    print(l1);
+    print("Enter 1 for sum of all element:");
+    print("Enter 2 for sum of spacific Row:");
+    print("Enter 3 for sum of spacific Column:");
+    print("Enter 4 for sum of diagonal element:");
+    print("Enter 5 for sum of antidiagonal element:");
+    print("Enter 0 for sum of  exit:");
+
+    do {
+      print("Enter the value of choice:-");
+      no = int.parse(stdin.readLineSync()!);
+
+      switch (no) {
+        case 1:
+          {
+            List l2 = [];
+            sum = 0;
+            for (int i = 0; i < 3; i++) {
+              for (int j = 0; j < 3; j++) {
+                sum = sum + l1[i][j];
+              }
+            }
+            print("sum of all element:-${sum}");
+          }
+          break;
+
+        case 2:
+          {
+            List l2 = [];
+            for (int i = 0; i < 3; i++) {
+              sum = 0;
+              for (int j = 0; j < 3; j++) {
+                sum = sum + l1[i][j];
+              }
+            }
+            print("sum of Row:-${sum}");
+          }
+          break;
+
+        case 3:
+          {
+            List l2 = [];
+            for (int i = 0; i < 3; i++) {
+              sum = 0;
+              for (int j = 0; j < 3; j++) {
+                sum = sum + l1[i][j];
+              }
+            }
+            print("sum of column:-${sum}");
+          }
+          break;
+
+        case 4:
+          {
+            List l2 = [];
+            sum = 0;
+            for (int i = 0; i < 3; i++) {
+              for (int j = 0; j < 3; j++) {
+                sum = sum + l1[i][j];
+              }
+            }
+            print("sum of diagonal element:-${sum}");
+          }
+          break;
+
+        case 5:
+          {
+            List l2 = [];
+            sum = 0;
+            for (int i = 0; i < 3; i++) {
+              for (int j = 0; j < 3; j++) {
+                if (i + j == 2) {
+                  sum = sum + l1[i][j];
+                }
+              }
+            }
+            print("sum of anti-diagonal element:-${sum}");
+          }
+          break;
+
+        case 0:
+          {
+            print("========exit========");
+          }
+      }
+    }
+    while(no!=0);
+}
